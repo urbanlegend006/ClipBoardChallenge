@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Clipboard Health Test - Amazon.in" >
+    <test name="Test Chrome">
+        <classes>
+            <class name="ClipBoardChallenge.AmazonTest"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

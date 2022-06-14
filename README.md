@@ -26,3 +26,26 @@ For easiest way to getting started, extract this project and open it from Intell
 Tip: Do remember to update this readme file for anything else that you think needs updating here!
 
 ## Success
+
+============================================================================================================================================================
+
+# Anit Sarker's Comments for the given problem and steps followed to solve
+- **The given problem is solved successfully and can be run on Localhost, Docker Container and Docker-Selenoid** 
+    - There is no change in the framework for running the test locally.
+    - There is no change in the framework for running the test on Grid using Docker.
+    - I have added a Dockerfile which will build the docker image of the tests. Follow the below steps to run the test on Docker container hosted locally on yoyr machine.
+        1. run "docker build -t imagename:tag ." from root.
+        2. run "docker run -d selenium/standalone-chrome-debug:latest". This will start the chrome browser in a docker container.
+        3. run your built image using "docker run -ti --network="host" imagename/tag /bin/sh". We are opening the shell in the built docker to run our commands.
+        4. move to pom.xml using "cd /home/AmazonTestSuite"
+        5. Run "mvn clean test".
+        
+      ***NOTE: Before creating the Docker Image you must update the HOST property value to docker container in the "Choices.conf" config file***
+    - Implemented Page Object Model and pages are stored in "src/main/java/amazonPages"
+    - The End-to-End test written in "ClipBoardChallenge.AmazonTest.java" class.
+    - Used @BeforeMethod and and @AfterMethod for Setup and Teardown methods of browsers.
+    - The Test is running fine in Chrome and Firefox browsers.
+    - The Test is running fine in Grid using Docker.
+    - The Test is running fine in Docker Container.
+    
+============================================================================================================================================================
